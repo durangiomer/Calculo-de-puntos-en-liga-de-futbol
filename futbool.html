@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA CALCULAR PUNTOS LIGA DE FUTBOL</h1>
+
+<script>
+
+	function saltarlinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir(frase) {
+
+		document.write(frase)
+		saltarlinea()
+		
+	}
+
+	var nombre = prompt("Nombre del equipo");
+	var victorias = parseInt(prompt("Informe cantidad de victorias"));
+	var empates = parseInt(prompt("Informe la cantidad de empates"));
+
+	puntosTotal = (victorias * 3) + empates;
+
+	imprimir("El total de puntos del equipo es: " + puntosTotal);
+
+	if (puntosTotal > 10) {
+	imprimir("El equipo " + nombre + " esta mejor que el año pasado")
+	}
+	if (puntosTotal < 10) {
+	imprimir("El equipo" + nombre + " esta peor que el año pasado")
+	}
+	if (puntosTotal == 10) {
+	imprimir("El equipo" + nombre + " esta igual que el año pasado")
+	}
+
+</script>
